@@ -93,6 +93,8 @@ bool CWindowRule::matches(PHLWINDOW w, bool allowEnvLookup) {
                     return false;
                 break;
             case RULE_PROP_ON_WORKSPACE:
+                if (!w->m_workspace)
+                    continue;
                 if (!engine->match(w->m_workspace))
                     return false;
                 break;
