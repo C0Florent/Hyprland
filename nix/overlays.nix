@@ -86,7 +86,7 @@ in {
     (final: prev: {
       aquamarine = prev.aquamarine.override {debug = true;};
       hyprutils = prev.hyprutils.override {debug = true;};
-      hyprland-debug = prev.hyprland.override {debug = true;};
+      hyprland-debug = prev.hyprland.override {debug = true; withTests = true;};
     })
   ];
 
